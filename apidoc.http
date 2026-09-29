@@ -1,0 +1,44 @@
+#api cll for crete user
+###
+POST http://127.0.0.1:8000/user/admin/
+Content-Type: application/json
+
+{
+    "user":"adminuser",
+    "email":"adminuser@gmail.com",
+    "password":"adminuser"
+}
+
+#list turf
+###
+GET http://127.0.0.1:8000/turf/
+Accept: application/json
+
+#adding
+###
+POST http://127.0.0.1:8000/turf/
+Content-Type: application/json
+
+{
+    "name":"anandhu",
+    "phone":"8704527866",
+    "location":"alappuzha",
+    "fee":"1200"
+}
+
+###
+GET http://127.0.0.1:8000/turf/1/
+Accept: application/json
+
+#updating
+###
+PUT http://127.0.0.1:8000/turf/3/
+Content-Type: application/json
+
+
+{
+    "name":"anandhu ichaa",
+    "phone":"8704527866",
+    "location":"alappuzha",
+    "fee":"1100"
+}
