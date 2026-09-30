@@ -42,3 +42,17 @@ Content-Type: application/json
     "location":"alappuzha",
     "fee":"1100"
 }
+
+#list all bookings
+###
+GET http://127.0.0.1:8000/booking/
+Accept: application/json
+
+#for book a slot
+###
+POST http://127.0.0.1:8000/booking/
+Content-Type: application/json
+
+{
+    
+}

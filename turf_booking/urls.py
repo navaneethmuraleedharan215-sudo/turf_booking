@@ -20,11 +20,19 @@ from django.urls import path
 from app_turf.views import UserAdminCreateView
 from app_turf.views import TurfListCreateView,TurfRetrieveUpdateDeleteView
 
+from booking.models import Slot
+from booking import views
+from booking.views import BookingListCreateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('user/admin/',UserAdminCreateView.as_view()),
     path('turf/',TurfListCreateView.as_view()),
     path('turf/<int:pk>/',TurfRetrieveUpdateDeleteView.as_view()),
+
+    path('booking/',BookingListCreateView.as_view()),
+
+
   
 ]
