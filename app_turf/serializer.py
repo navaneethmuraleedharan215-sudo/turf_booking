@@ -8,9 +8,10 @@ class UserSerializer(serializers.Serializer):
 
 class turfSerializer(serializers.Serializer):
     id=serializers.CharField(read_only=True)
-    name=serializers.CharField()
-    location=serializers.CharField()
+    team_name=serializers.CharField(max_length=200)
     phone=serializers.IntegerField()
+    date=serializers.DateField()
+    duration=serializers.IntegerField
     fee=serializers.IntegerField()
     def validate(self,validated_data):
         fee=validated_data.get("fee")

@@ -1,9 +1,10 @@
 from rest_framework import serializers
 
 class BookingSerializer(serializers.Serializer):
-    team_name=serializers.CharField()
-    phone=serializers.CharField()
-    email=serializers.EmailField()
-    time=serializers.TimeField(read_only=True)
+    id=serializers.CharField(read_only=True)
+    team_name=serializers.CharField(max_length=200)
+    phone=serializers.IntegerField()
     date=serializers.DateField()
-    duration=serializers.IntegerField()
+    time=serializers.TimeField()
+    duration=serializers.IntegerField
+    fee=serializers.IntegerField()

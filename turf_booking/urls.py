@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
 from app_turf.views import UserAdminCreateView
 from app_turf.views import TurfListCreateView,TurfRetrieveUpdateDeleteView
@@ -32,6 +32,10 @@ urlpatterns = [
     path('turf/<int:pk>/',TurfRetrieveUpdateDeleteView.as_view()),
 
     path('booking/',BookingListCreateView.as_view()),
+
+
+  #booking v2
+    path('v2/booking/',include('booking_v2.urls')),
 
 
   

@@ -20,9 +20,10 @@ POST http://127.0.0.1:8000/turf/
 Content-Type: application/json
 
 {
-    "name":"anandhu",
+    "team_name":"anandhu",
     "phone":"8704527866",
-    "location":"alappuzha",
+    "date":"2026-08-01",
+    "duration":"1 hour",
     "fee":"1200"
 }
 
@@ -32,15 +33,16 @@ Accept: application/json
 
 #updating
 ###
-PUT http://127.0.0.1:8000/turf/3/
+PUT http://127.0.0.1:8000/turf/1/
 Content-Type: application/json
 
 
 {
-    "name":"anandhu ichaa",
+    "team_name":"ajay",
     "phone":"8704527866",
-    "location":"alappuzha",
-    "fee":"1100"
+    "date":"2025-08-01",
+    "duration":"2 hour",
+    "fee":"1200"
 }
 
 #list all bookings
@@ -55,4 +57,16 @@ Content-Type: application/json
 
 {
     
+}
+
+#v2
+# call for adding
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"user",
+    "email":"user@gmail.com",
+    "password":"password@123"
 }
